@@ -44,12 +44,13 @@ class binarySearch(object):
         while first_index <= last_index and not found:
             count += 1
             midpoint = (first_index + last_index)//2
+            break
         if number == self.number_list[midpoint]:
             found = True
-        print ({'count':count, 'index':midpoint})
+        return {'count':count, 'index':midpoint}
 
         if midpoint < number:
             first_index = midpoint + 1
         elif midpoint > number:
             last_index = midpoint -1
-        print ({'count':0, 'index':index})
+        return {'count':0, 'index':index}
